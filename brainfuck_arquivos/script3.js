@@ -22,7 +22,10 @@
     ,index: 0 //indice do "open_loop"
     }
 
-    var input //input arry
+    var input = {
+         list: [] //input arry
+        ,index: 0 //indice do input
+    }
     var step  //true --> executar "step"
 
 //-----------------------------------------------------------
@@ -88,6 +91,8 @@ function f_start() {
 
     open_loop.list = [0];
     open_loop.index = 0;
+
+    input.index = 0;
 
     //definindo a primeira posicao da memoria na tabela
     memory.table.innerHTML = "<tr><td>--></td><td>0</td></tr>";
@@ -254,15 +259,18 @@ function f_instrucion(params) {
 
     function f_input(){
 
+        //pegar o input
+        input.list = Array.from(document.getElementById("input").value);
+
         //verificar se o input está vazio
-        if (input.length == 0) {
+        if (input.list.length == 0) {
             alert("Input está vazio");
     
         }else{
     
         //inserir o valor do input
-        memory.list[memory.position] = input[0].charCodeAt();
-        input.shift();
+        memory.list[memory.position] = input.list[input.index].charCodeAt();
+        input.index++;
 
         f_memory_update();
         }
