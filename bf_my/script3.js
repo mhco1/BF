@@ -63,7 +63,6 @@ function f_main() {
         f_instrucion();
 
         if (step == true) {
-            f_memory_table();
             
             //atualizar o contador do step
             document.getElementById("step_output").textContent = code.position +1;
@@ -73,6 +72,8 @@ function f_main() {
 
         } else {f_reset();}
     }
+    
+    f_memory_table();
 }
 
 //prepara o ambiente
@@ -201,16 +202,12 @@ function f_instrucion(params) {
         if(memory.position +1 == memory.list.length){
             memory.list.push(0);
 
-            //adiciona o novo valor na tabela
-            if(step == true){
-                memory.table.innerHTML += "<tr><td></td><td>0</td></tr>";
-            }
+        //adiciona o novo valor na tabela
+            memory.table.innerHTML += "<tr><td></td><td>0</td></tr>";
         }
 
         //excluir a seta da posicao da tabela
-            if( step == true){
-            memory.table.childNodes[memory.position].childNodes[0].textContent = "";
-        }
+        memory.table.childNodes[memory.position].childNodes[0].textContent = "";
 
         //avanca a posicao
         memory.position++;

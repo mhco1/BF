@@ -63,14 +63,15 @@ table{
 /*----menu----------------------------------------------*/
 
 
-#menu{
+.menu{
     grid-area: nave;
     
     padding: 20px;
-    width: 86vw;
+    width: 100%;
     height: 60px;
     
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
     align-items: center;
@@ -84,8 +85,8 @@ table{
     background-color: brown;
 }
 
-#menu > button{
-    width: 100px;
+.menu > button{
+    width: 80px;
     height: 30px;
     
     margin: 10px 10px;
@@ -96,7 +97,7 @@ table{
     box-shadow: 1px 1px 1px #999;
 }
 
-#menu > textarea{
+.menu > textarea{
     overflow-y: hidden;
     text-justify: auto;
     text-align: center;
@@ -108,34 +109,45 @@ table{
     height: 12px;
 }
 
-#menu > h1{
-    
+.menu > h1{
+    width: 100%;
+    text-align: center;
+
     font-size: 25px;
     font-family: 'Yusei Magic', sans-serif;
     color: aliceblue;
 }
 
+.menu > h1 > br{
+    display: none;
+}
+
 @media screen and (min-width: 700px){
-    #menu{
+    .menu{
         position: relative;
         flex-direction: column;
-        width: 100%;
+        width: 80%;
         height: 100%;
     }
 
-    #menu >button{
-
+    .menu > button{
+        width: 100px;
     }
 
-    #menu > textarea{
+    .menu > textarea{
         width: 85px;
         margin: 10px;
     }
+
+    .menu > h1 > br{
+        display: block;
+    }
+
 }
 
 /*----area----------------------------------------------*/
 
-#area{
+.area{
     margin-top: 100px;
 
     width: 100vw;
@@ -147,19 +159,8 @@ table{
     "input  output"
     "memory memory";
 }
-@media screen and (min-width: 700px){
-    #area{
-        margin-top: 0px;
-        width: 100%;
 
-        grid-template: 
-        "code   code"
-        "input  memory"
-        "output memory";
-    }
-}
-
-#area_code{
+.area_code{
     grid-area: code;
     
     display: flex;
@@ -170,13 +171,7 @@ table{
     height: 300px;
 }
 
-@media screen and (min-width: 700px){
-    #area_code{
-        height: 100%;
-    }
-}
-
-#area_input{
+.area_input{
     grid-area: input;
 
     display: flex;
@@ -186,7 +181,7 @@ table{
 }
 
 
-#area_output{
+.area_output{
     grid-area: output;
 
     display: flex;
@@ -196,11 +191,27 @@ table{
 }
 
 
-#area_memory{
+.area_memory{
+    border-style: ;
     grid-area: memory;
 
     display: flex;
     flex-direction: column;
 
     text-align: center;
+}
+@media screen and (min-width: 700px){
+    .area{
+        margin-top: 0px;
+        width: 100%;
+
+        grid-template: 
+        "code   code"
+        "input  memory"
+        "output memory";
+    }
+
+    .area_code{
+        height: 100%;
+    }
 }
