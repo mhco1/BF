@@ -1,11 +1,13 @@
 html{
     height: 93.6%;
+    /*--current-li: 1;*/
 }
 
 body{    
     height: 100%;
     background-color: burlywood;
 }
+
 @media screen and (min-width: 700px){
     body{
         display: grid;
@@ -22,17 +24,35 @@ p, th{
 
     font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(27, 2, 2);
+    color:rgb(27, 2, 2);
 }
 
 textarea{
     display: block;
     resize: none;
-    margin-left: auto;
-    margin-right: auto;
-    
-    width: 75%;
-    height: 100%;
+}
+
+table{
+    justify-content: center;
+}
+
+#code_out{
+    display: none;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+#code_out li{
+    display: inline-block;
+}
+
+/*
+#code_input li:nth-child(var(--current-li)){
+background-color: rgba(0, 4, 255, 0.363);
+}*/
+
+/*----estilo padrao--------------------------------------*/
+textarea, table, ul{
     padding: 10px;
 
     font-size: 15px;
@@ -45,24 +65,16 @@ textarea{
     background-color: white;
 }
 
-table{
+/*----tamanhos padroes ---------------------------------*/
+textarea, table, ul{
     margin-left: auto;
     margin-right: auto;
-    justify-content: center;
 
-    padding: 10px;
-
-    line-height: 1.5;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #999;
-
-    background-color: white;
-
+    width: 75%;
+    height: 100%;
 }
+
 /*----menu----------------------------------------------*/
-
-
 .menu{
     grid-area: nave;
     
@@ -146,7 +158,6 @@ table{
 }
 
 /*----area----------------------------------------------*/
-
 .area{
     margin-top: 100px;
 
@@ -180,7 +191,6 @@ table{
     text-align: center;
 }
 
-
 .area_output{
     grid-area: output;
 
@@ -189,7 +199,6 @@ table{
 
     text-align: center;
 }
-
 
 .area_memory{
     border-style: ;
@@ -200,6 +209,7 @@ table{
 
     text-align: center;
 }
+
 @media screen and (min-width: 700px){
     .area{
         margin-top: 0px;

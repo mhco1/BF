@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0">
-    <title>Brainfuck</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<title>Brainfuck</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style1.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style1.css">
 
+    <script src="script3.js"></script>
 </head>
-<script src="script3.js" ></script>
 
 <body>
-    <nav class="menu">
-        <h1>Brain <br>Fuck</h1>
+    <!--<style>
+        html{
+        --current-li: 1;
+        }
+    </style>-->
+
+	<nav class="menu">
+		<h1>Brain <br>Fuck</h1>
         <button   id="start"       onclick= f_start_button() >start</button>
         <button   id="step"        onclick= f_step_button()  >step</button>
-        <textarea id="step_output" readOnly></textarea>
         <button   id="reset"       onclick= f_reset_button() >reset</button>
     </nav>
 
     <form class="area">
         <div class="area_code">
         <p>codigo</p>
-        <textarea id="code"></textarea>
+        <textarea id="code_in"></textarea>
+        <ul id="code_out" style="display: flex;">
+            <li>></li>
+            <li>></li>
+            <li>></li>
+        </ul>
         </div>
 
         <div class="area_input">
