@@ -1,7 +1,2 @@
+Estilo que será inserida pelo JS em style
 
-document.getElementById("myH1").style.color = "red"
-
-document.getElementById("code_input").childNodes[1].style.background = "red"
-
-------------
-Editando a forma de sinalizar em que etapa o codigo esta
