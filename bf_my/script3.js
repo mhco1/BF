@@ -1,5 +1,5 @@
-import * as instrucions from "scripts/instrucions.js";
-import * as resourcese from "scripts/resourcese.js";
+//import * as instrucions from "scripts/instrucions.js";
+//import * as resourcese from "scripts/resourcese.js";
 
 //INICIALIZACAO
 
