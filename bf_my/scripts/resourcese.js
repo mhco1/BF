@@ -1,5 +1,5 @@
 
-export * from "../script3";
+export * from "script3";
 
 //prepara o ambiente
 function f_start() {

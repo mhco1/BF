@@ -1,5 +1,5 @@
 
-export * from "../script3";
+export * from "script3";
 
 //executa a instrucao do codigo
 function f_instrucion(){
