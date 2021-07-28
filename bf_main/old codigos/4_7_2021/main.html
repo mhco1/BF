@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<title>Brainfuck</title>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap">
+	<link rel="stylesheet" href="./style/reset.css">
+	<link rel="stylesheet" href="./style/main.css">
+    
+    <script type="module" src="./scripts/modolo/funcoes.js"></script>
+
+    <script type="module" src="./scripts/class/code.js"></script>
+    <script type="module" src="./scripts/class/memory.js"></script>
+
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/start.js"></script>
+
+    <script>
+
+        var f;
+        var code;
+        var memory;
+        var main;
+        
+    </script>
+
+</head>
+
+<body>
+	<nav class="menu">
+		<h1>Brain <br>Fuck</h1>
+        <button id="start" onclick="main.startBtn()" >start</button>
+        <button id="step"  onclick="main.stepBtn()" >step</button>
+        <button id="reset" onclick="main.resetBtn()" >reset</button>
+    </nav>
+
+    <form class="area">
+        <div class="areaCode">
+        <p>codigo</p>
+        <textarea id="codeIn"></textarea>
+        <ul id="codeOut" style="display: flex;">
+            <li>></li>
+            <li>></li>
+            <li>></li>
+        </ul>
+        </div>
+
+        <div class="areaInput">
+        <p>input</p>
+        <textarea id="input"></textarea>
+        </div>
+
+        <div class="areaOutput">
+        <p>output</p>
+        <textarea id="output"readOnly></textarea>
+        </div>
+
+        <div class="areaMemory">
+        <p>memoria</p>
+        <table id="tableMemory">
+            <thead>
+                <tr>
+                    <th>posição</th>
+                    <th>memoria</th>
+                </tr>
+            </thead>
+            <tbody id="memory">
+            </tbody>
+        </table>
+        </div>
+    <form>
+</body>
+</html>
