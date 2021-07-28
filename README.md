@@ -4,7 +4,7 @@ Interpretador BrainFuck em JavaScript
 ---
 ## Regras do jogo
 
-O **Bf** é uma linguagem de programação que se passa por dificil, mas não é pra tanto kkkk
+O **Bf** é uma linguagem de programação esoterica que se passa por dificil, mas não é pra tanto kkkk
 
 Ela funciona como uma fita que armazena valores, a **memoria**
 
