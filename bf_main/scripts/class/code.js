@@ -61,7 +61,7 @@ export default class Code{
     }
  
     start(){
-        code.code = f.dom('#codeIn').value;
+        code.code = f.dom('#code-text .code-text-input[0]').value;
         code.code = code.code.replaceAll(/[^\u003e|\u003c|\u002b|\u002d|\u005b|\u005d|\u002e|\u002c]/g,'');
         //| > || < || + || - || [ || ] || . || , |
         view.codeStart();

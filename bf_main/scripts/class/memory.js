@@ -9,7 +9,7 @@ export default class Memory{
     start(){
         memory.memory = [0];
         memory.i = 0;
-        memory.input = Array.from(f.dom('#input').value);
+        memory.input = Array.from(f.dom('#input .input-text[0]').value);
         memory.output = '';
     };
 }

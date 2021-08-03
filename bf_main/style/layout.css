@@ -1,0 +1,55 @@
+
+.header{
+    grid-area: nave;
+    
+    padding: 20px;
+    width: 100vw;
+    height: 60px;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    z-index: 10;
+    
+    background-color: brown;
+}
+
+@media screen and (min-width: 700px){
+    .header{
+        position: relative;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: auto;
+        height: auto;
+    }
+}
+
+.area{
+    margin-top: 100px;
+    padding-bottom: 20px;
+
+    display: grid;
+    grid-template-columns: 50%, 50%;
+    grid-template: 
+    "code   code"
+    "input  output"
+    "memory memory";
+}
+
+@media screen and (min-width: 700px){
+    .area{
+        margin-top: 0px;
+        width: 100%;
+
+        grid-template: 
+        "code   code"
+        "input  memory"
+        "output memory";
+    }
+}

@@ -9,7 +9,12 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap">
 	<link rel="stylesheet" href="./style/reset.css">
-	<link rel="stylesheet" href="./style/main.css">
+    
+	<link rel="stylesheet" href="./style/html_default.css">
+    <link rel="stylesheet" href="./style/layout.css">
+    <link rel="stylesheet" href="./style/elements_default.css">
+    <link rel="stylesheet" href="./style/code_nav.css">
+    <link rel="stylesheet" href="./style/area.css">
     
     <script type="module" src="./scripts/modolo/funcoes.js"></script>
     <script type="module" src="./scripts/class/control/control.js"></script>
@@ -35,44 +40,46 @@
 </head>
 
 <body>
-	<nav class="menu">
-		<h1>Brain <br>Fuck</h1>
-        <button id="start" onclick="main.mainStart()" >start</button>
-        <button id="step"  onclick="main.mainStep()" >step</button>
-        <button id="reset" onclick="main.mainReset()" >reset</button>
-    </nav>
+    <header class="header">
+        <h1 class="logo">Brain <br>Fuck</h1>
+        <nav id="code-nav">
+            <button id="code-start" class="btn-default .border-default" onclick="main.mainStart()" >start</button>
+            <button id="code-step"  class="btn-default .border-default" onclick="main.mainStep()" >step</button>
+            <button id="code-reset" class="btn-default .border-default" onclick="main.mainReset()" >reset</button>
+        </nav>
+    </header>
 
-    <form class="area">
-        <div class="areaCode">
-        <p>codigo</p>
-        <textarea id="codeIn"></textarea>
-        <ul id="codeOut" style="display: none;">
-        </ul>
+    <section class="area">
+        <div id="code-text" class="area-item">
+            <p        class="area-text">codigo</p>
+            <textarea class="code-text-input textarea border-default"></textarea>
+            <ul       class="code-text-output textarea border-default"></ul>
         </div>
 
-        <div class="areaInput">
-        <p>input</p>
-        <textarea id="input"></textarea>
+        <div id="input" class="area-item">
+            <p        class="area-text">input</p>
+            <textarea class="input-text textarea border-default"></textarea>
         </div>
 
-        <div class="areaOutput">
-        <p>output</p>
-        <textarea id="output"readOnly></textarea>
+        <div id="output" class="area-item">
+            <p        class="area-text">output</p>
+            <textarea class="output-text textarea border-default"
+            readOnly></textarea>
         </div>
 
-        <div class="areaMemory">
-        <p>memoria</p>
-        <table id="tableMemory">
+        <div id="memory" class="area-item">
+        <p     class="area-text">memoria</p>
+        <table class="memory-table border-default">
             <thead>
                 <tr>
                     <th>posicao</th>
                     <th>memoria</th>
                 </tr>
             </thead>
-            <tbody id="memory">
+            <tbody id="memory-access">
             </tbody>
         </table>
         </div>
-    <form>
+    <section>
 </body>
 </html>

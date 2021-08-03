@@ -1,0 +1,69 @@
+
+.textarea{
+    display: block;
+    resize: none;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 10px;
+
+    width: 75%;
+    height: 100%;
+
+    background-color: white;
+}
+
+.area-item{
+    display: flex;
+    flex-direction: column;
+
+    /* justify-content: center; */
+    /* text-align: center; */
+}
+
+.area-text{
+    padding: 10px;
+    text-align: center;
+}
+
+/* ------------------------------------------- */
+
+#code-text{
+    grid-area: code;
+    height: 300px;
+}
+
+.code-text-output{
+    display: none;
+}
+
+.code-text-output li{
+    width: 15px;
+    height: 30px;
+    text-align: center;
+}
+
+/* ------------------------------------------- */
+
+#input{
+    grid-area: input;
+}
+
+#output{
+    grid-area: output;
+}
+
+#memory{
+    /* border-style: none; */
+    grid-area: memory;
+}
+
+.memory-table{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width:75%;
+    background-color: white;
+    text-align: center;
+}

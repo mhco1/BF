@@ -1,0 +1,21 @@
+.logo{
+    text-align: center;
+
+    font-size: 25px;
+    font-family: 'Yusei Magic', sans-serif;
+    color: aliceblue;
+}
+
+#code-nav{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (min-width: 700px){
+    #code-nav{
+        flex-direction: columns;
+        flex-wrap: wrap;
+    }
+}
