@@ -3,7 +3,8 @@ export default class Code{
         this.code; // algoritimo bf a ser executado
         this.i; // pilha como ponteiro do algoritmo
         this.loop; // pilha que armazenar posicoes que sao retornadas pelo ']'
-        this.select = [ // colecao das funcaes a serem executadas
+        this.stop // para o processo
+        this.select = [ // colecao de funcoes a serem executadas
             function(){ //next
                 let a = 0;
                 if(memory.i +1 == memory.memory.length){memory.memory.push(0);a=1;}
@@ -58,24 +59,36 @@ export default class Code{
                 }
             }
         ];
+        this.otherSelect = [ // colecao de funcoes adicionadas a serem executadas
+            function(){ //debugger
+                code.stop = true;
+                view.codeUpdate(code.i[0],'#09ff0052')
+            }
+        ]
     }
  
     start(){
         code.code = f.dom('#code-text .code-text-input[0]').value;
-        code.code = code.code.replaceAll(/[^\u003e|\u003c|\u002b|\u002d|\u005b|\u005d|\u002e|\u002c]/g,'');
-        //| > || < || + || - || [ || ] || . || , |
+        code.code = code.code.replaceAll(RegExp(
+        '[^\\u003e|\\u003c|\\u002b|\\u002d|\\u005b|\\u005d|\\u002e|\\u002c'+
+        '\\007c]','g'),'');
+        // > < + - [ ] . ,
+        // |
         view.codeStart();
 
-        code.code = code.code.replaceAll('>','00');
-        code.code = code.code.replaceAll('<','01');
-        code.code = code.code.replaceAll('+','02');
-        code.code = code.code.replaceAll('-','03');
-        code.code = code.code.replaceAll('[','04');
-        code.code = code.code.replaceAll(']','05');
-        code.code = code.code.replaceAll('.','06');
-        code.code = code.code.replaceAll(',','07');
+        code.code = code.code.replaceAll('>','100');
+        code.code = code.code.replaceAll('<','101');
+        code.code = code.code.replaceAll('+','102');
+        code.code = code.code.replaceAll('-','103');
+        code.code = code.code.replaceAll('[','104');
+        code.code = code.code.replaceAll(']','105');
+        code.code = code.code.replaceAll('.','106');
+        code.code = code.code.replaceAll(',','107');
+
+        code.code = code.code.replaceAll('|','000')
 
         code.i = [0,0,0];
         code.loop = [];
+        code.stop = false;
     };
 }

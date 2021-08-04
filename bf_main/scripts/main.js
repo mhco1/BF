@@ -14,11 +14,13 @@ export default class Main{
 //------------------------------------------------------
 
     mainStart(){
+        main.mainStandard();
+
         main.step = false;
         main.load ? main.start(): '';
         if(code.i[0] < code.code.length) {
-            while (code.i[0] < code.code.length) {
-                main.mainStandard();
+            while (code.i[0] < code.code.length && code.stop == false) {
+                main.mainStandard1();
             };
             view.outputUpdate();
             view.memoryUpdate();
@@ -26,13 +28,15 @@ export default class Main{
     };
 
     mainStep(){
+        main.mainStandard();
+
         main.step = true;
         main.load ? main.start(): '';
         if(code.i[0] < code.code.length) {
             view.codeUpdate(code.i[1],'#ff3c0052');// executado
             view.codeUpdate(code.i[0],'#09ff0052');// em processo
-            main.mainStandard();
-            view.codeUpdate(code.i[0],'#0000ff52');// ser� executado
+            main.mainStandard1();
+            view.codeUpdate(code.i[0],'#0000ff52');// sera executado
             view.outputUpdate();
         };
     };
@@ -47,10 +51,22 @@ export default class Main{
 //------------------------------------------------------
 
     mainStandard(){
-        let a = parseInt(code.code.slice(code.i[0],code.i[0]+2));
-        code.select[a]();
-        code.i.length >1 ? code.i.pop() :'';
+        if(code.stop){
+            code.stop = false;
+            view.codeUpdate(code.i[1],'#ff3c0052')
+        }
+    }
+
+    mainStandard1(){
+        let a = parseInt(code.code[code.i[0]]);
+        let b = parseInt(code.code.slice(code.i[0]+1,code.i[0]+3))
+        if (a){
+            code.select[b]();
+        }else{
+            code.otherSelect[b]();
+        }
+        code.i.pop();
         code.i.unshift(code.i[0]);
-        code.i[0] +=2;
+        code.i[0] +=3;
     };
 };

@@ -1,3 +1,10 @@
+//---------------------------------------------------
+// Criado por Matheus henrique
+//
+// Funcoes é uma classe que axilia no desenvolvimento com javascript
+// Declare a classe em uma variavel e execute help() para informações das funções disponiveis
+//---------------------------------------------------
+
 export default class Funcoes{
     constructor(){
     }
@@ -80,7 +87,7 @@ c:
 
 cp:
     objeto contendo um caminho da DOM
-    Por este objeto que ser� iniciado a
+    Por este objeto que sera iniciado a
     interacao com a DOM
     exemplo:
     cp = document.getElementsByTagName('div')
