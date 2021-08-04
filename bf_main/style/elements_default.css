@@ -1,13 +1,33 @@
 .btn-default{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
     width: 80px;
     height: 30px;
+    line-height: 1.5;
     
-    margin: 10px 10px;
+    padding: 10px;
+    margin: 10px;
+
+    cursor: pointer;
+    border-radius: 30px;
+    border: 1px solid var(--color-3);
+    box-shadow: 1px 1px 1px var(--color-4);
+}
+
+.btn-default:active{
+    background-color: var(--color-7);
+    color:white;
+
+    border: 1px solid var(--color-7);
+    box-shadow: 1px 1px 1px rgb(48, 48, 99);
 }
 
 .border-default{
     line-height: 1.5;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #999;
+    border: 1px solid var(--color-3);
+    box-shadow: 1px 1px 1px var(--color-4);
+    transition: border-color 1s, box-shadow 1s;
 }

@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap">
 	<link rel="stylesheet" href="./style/reset.css">
     
+    <link rel="stylesheet" href="./style/color.css">
 	<link rel="stylesheet" href="./style/html_default.css">
     <link rel="stylesheet" href="./style/layout.css">
     <link rel="stylesheet" href="./style/elements_default.css">
@@ -43,10 +44,15 @@
     <header class="header">
         <h1 class="logo">Brain <br>Fuck</h1>
         <nav id="code-nav">
-            <button id="code-start" class="btn-default .border-default" onclick="main.mainStart()" >start</button>
-            <button id="code-step"  class="btn-default .border-default" onclick="main.mainStep()" >step</button>
-            <button id="code-reset" class="btn-default .border-default" onclick="main.mainReset()" >reset</button>
+            <button id="code-start" class="btn-default" onclick="main.mainStart()" >start</button>
+            <button id="code-step"  class="btn-default" onclick="main.mainStep()" >step</button>
+            <button id="code-reset" class="btn-default" onclick="main.mainReset()" >reset</button>
         </nav>
+        <div id="dark-mode">
+            <input class="dark-mode-input" type="checkbox" onclick="view.changeModeDark()" id="foo">
+            <label class="dark-mode-label" for="foo"></label>
+        </div>
+        <!-- <input class="switch-default" type="checkbox" onClick="view.changeModeDark()"></input> -->
     </header>
 
     <section class="area">

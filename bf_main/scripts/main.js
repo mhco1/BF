@@ -32,7 +32,7 @@ export default class Main{
             view.codeUpdate(code.i[1],'#ff3c0052');// executado
             view.codeUpdate(code.i[0],'#09ff0052');// em processo
             main.mainStandard();
-            view.codeUpdate(code.i[0],'#0000ff52');// será executado
+            view.codeUpdate(code.i[0],'#0000ff52');// serï¿½ executado
             view.outputUpdate();
         };
     };

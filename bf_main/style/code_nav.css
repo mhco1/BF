@@ -19,3 +19,49 @@
         flex-wrap: wrap;
     }
 }
+
+#dark-mode > .dark-mode-input {
+    display: none;
+}
+
+#dark-mode > .dark-mode-label {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    position: relative;
+
+    margin: 5px;
+
+    height: 10px;
+    width: 44px;
+
+    cursor: pointer;
+}
+
+#dark-mode > .dark-mode-label:after {
+    content: '';
+    display: block;
+
+    margin-right: 20px;
+
+    width: 26px;
+    height: 26px;
+}
+
+#dark-mode > .dark-mode-label,
+#dark-mode > .dark-mode-label:after{
+    border-radius: 100px;
+
+    border: 1px solid;
+
+    background: var(--i-color-6);
+    color: var(--i-color-6);
+
+    transition: all 0.3s ease;
+}
+
+#dark-mode > .dark-mode-input:checked ~ .dark-mode-label:after {
+    margin-left: 20px;
+    margin-right: 0px;
+}

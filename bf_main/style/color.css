@@ -1,0 +1,33 @@
+html{
+    --color-1: white;
+    --color-2: burlywood;
+    --color-3: #ccc;
+    --color-4: #999;
+    --color-5: #1b0202;
+    --color-6: brown;
+    --color-7: #3b3bcf;
+
+    /* invert */
+    /* --i-color-1: #0a0121;
+    --i-color-3: #1206cc;
+    --i-color-4: #424675; */
+    --i-color-6:#03000a;
+}
+
+/*modo dark*/
+
+.NOThtml{
+    --color-1: #0a0121;
+    --color-2: #0a0121;
+    --color-3: #1206cc;
+    --color-4: #424675;
+    --color-5: #1da214;
+    --color-6: #03000a;
+    --color-7: brown;
+
+    /* invert */
+    /* --i-color-1: white;
+    --i-color-3: #ccc;
+    --i-color-4: #999; */
+    --i-color-6:brown;
+}

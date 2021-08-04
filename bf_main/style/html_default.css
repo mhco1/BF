@@ -2,13 +2,15 @@ html{
     /* height: 93.6vh; */
     font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color:rgb(27, 2, 2);
+    color: var(--color-5);
     height: 100vh;
+    transition: color 1s;
 }
 
 body{    
     height: 100vh;
-    background-color: burlywood;
+    background-color: var(--color-2);
+    transition: background-color 1s;
 }
 
 @media screen and (min-width: 700px){

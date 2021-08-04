@@ -7,7 +7,7 @@
     height: 60px;
     
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
     align-items: center;
 
@@ -17,7 +17,8 @@
     
     z-index: 10;
     
-    background-color: brown;
+    background-color: var(--color-6);
+    transition: background-color 1s;
 }
 
 @media screen and (min-width: 700px){
