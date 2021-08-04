@@ -46,6 +46,10 @@ Os botões para execução do codigo são:
 - ![](https://via.placeholder.com/15/09FF00/ffffff/?text=+) verde: a instrução que foi executada agora
 - ![](https://via.placeholder.com/15/FF3C00/ffffff/?text=+) vermelho: as instruções que ja foram executadas
 
+### Instruções adicionadas
+
+- `|` :: para a execução na posição em que ele está, para debbug
+
 ---
 O interpretador ta caminhando... então tem erros né kkkkk
 
