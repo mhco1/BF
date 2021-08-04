@@ -59,10 +59,10 @@ export default class Main{
 
     mainStandard1(){
         let a = parseInt(code.code[code.i[0]]);
-        let b = parseInt(code.code.slice(code.i[0]+1,code.i[0]+3));
+        let b = parseInt(code.code.slice(code.i[0]+1,code.i[0]+code.desloc));
         code.select[a][b]();
         code.i.pop();
         code.i.unshift(code.i[0]);
-        code.i[0] +=3;
+        code.i[0] +=code.desloc;
     };
 };

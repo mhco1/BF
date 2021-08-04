@@ -3,7 +3,8 @@ export default class Code{
         this.code; // algoritimo bf a ser executado
         this.i; // pilha como ponteiro do algoritmo
         this.loop; // pilha que armazenar posicoes que sao retornadas pelo ']'
-        this.stop // para o processo
+        this.stop; // para o processo
+        this.desloc; // deslocamento do ponteiro para ler a instrucao por completo
         this.select = [ // colecao de funcoes a serem executadas
             [// instrucoes padrao
                 function(){ //next
@@ -69,6 +70,7 @@ export default class Code{
     }
  
     start(){
+        let a;
         code.code = f.dom('#code-text .code-text-input[0]').value;
         code.code = code.code.replaceAll(RegExp(
         '[^\\u003e|\\u003c|\\u002b|\\u002d|\\u005b|\\u005d|\\u002e|\\u002c'+
@@ -77,19 +79,20 @@ export default class Code{
         // |
         view.codeStart();
 
-        code.code = code.code.replaceAll('>','000');
-        code.code = code.code.replaceAll('<','001');
-        code.code = code.code.replaceAll('+','002');
-        code.code = code.code.replaceAll('-','003');
-        code.code = code.code.replaceAll('[','004');
-        code.code = code.code.replaceAll(']','005');
-        code.code = code.code.replaceAll('.','006');
-        code.code = code.code.replaceAll(',','007');
+        code.code = code.code.replaceAll('>', a = '000');
+        code.code = code.code.replaceAll('<',     '001');
+        code.code = code.code.replaceAll('+',     '002');
+        code.code = code.code.replaceAll('-',     '003');
+        code.code = code.code.replaceAll('[',     '004');
+        code.code = code.code.replaceAll(']',     '005');
+        code.code = code.code.replaceAll('.',     '006');
+        code.code = code.code.replaceAll(',',     '007');
 
         code.code = code.code.replaceAll('|','100')
 
         code.i = [0,0,0];
         code.loop = [];
         code.stop = false;
+        code.desloc = a.length;
     };
 }

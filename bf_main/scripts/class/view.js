@@ -17,7 +17,7 @@ export default class View{
         f.dom('#code-text .code-text-output[0]').innerHTML = a.replaceAll(/([\W])/g,'<li>$1</li>');
     };
     codeUpdate(a,b){
-        isNaN(a)||a >= code.code.length ? '' : f.dom(`#code-text .code-text-output[0] li[${a/3}]`).style.background = b;
+        isNaN(a)||a >= code.code.length ? '' : f.dom(`#code-text .code-text-output[0] li[${a/code.desloc}]`).style.background = b;
     };
     codeReset(){
         f.dom('#code-text .code-text-input[0]').style = f.dom('#code-text .code-text-output[0]').style = '';
