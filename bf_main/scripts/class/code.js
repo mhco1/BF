@@ -41,7 +41,26 @@ export default class Code{
                     main.step?view.memoryValue():'';
                 },
                 function(){ // openLoop
+                    debugger
+                    let b;
+                    let c = 0;
+                    let d = code.i[0]
+                    if(memory.memory[memory.i]==0){
+                        main.step ? view.codeSelect(d,'#ff3c0052'):'';
+                        for (let a = d + code.desloc; a < code.code.length; a += code.desloc) {
+                            d = a;
+                            b = code.code.slice(a,a+code.desloc);
+                            b == '004' ? c++ :'';
+                            if(b == '005'){
+                                c == 0 ? a = code.code.length : c--;
+                            };
+                            main.step ? view.codeSelect(a,'#ff3c0052'):'';
+                        };
+                    main.step ? view.codeSelect(d,'#09ff0052'):'';
+                    code.i[0] = d
+                    }else{
                     code.loop.unshift(code.i[0]);
+                    };
                 },
                 function(){ // closeLoop
                     if(memory.memory[memory.i]==0){
