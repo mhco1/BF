@@ -1,6 +1,6 @@
 export default class View{
     constructor(){
-        this.modeDark = false;
+        this.modeDark = false; // ativa modo dark
     };
 
     start(){
@@ -16,9 +16,18 @@ export default class View{
         f.dom('#code-text .code-text-output[0]').style.display = 'flex';
         f.dom('#code-text .code-text-output[0]').innerHTML = a.replaceAll(/([\W])/g,'<li>$1</li>');
     };
-    codeUpdate(a,b){
+    codeSelect(a,b){
         isNaN(a)||a >= code.code.length ? '' : f.dom(`#code-text .code-text-output[0] li[${a/code.desloc}]`).style.background = b;
     };
+    codeUpdate(){
+        let b;
+        code.loopRun ? b = (code.lastLoop/code.desloc)+1 : b = (code.i[0]/code.desloc)-1;
+        for (let a = 0; a < b; a++) {
+            f.dom(`#code-text .code-text-output[0] li[${a}]`).style.background = '#ff3c0052';
+        };
+        b = (code.i[0]/code.desloc)-1;
+        f.dom(`#code-text .code-text-output[0] li[${b}]`).style.background = '#09ff0052';
+    }
     codeReset(){
         f.dom('#code-text .code-text-input[0]').style = f.dom('#code-text .code-text-output[0]').style = '';
         f.dom('#code-text .code-text-output[0]').innerHTML = '';

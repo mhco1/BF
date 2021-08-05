@@ -18,11 +18,12 @@ input: ${memory.input}
 
     codeStatus(){
         let b ='';
-        for (let a = 0; a < code.code.length; a+=3) {
+        for (let a = 0; a < code.code.length; a+=code.desloc) {
             a == code.i[0] ? b += ' >' : b += ' ';
-            b += code.code[a];
-            b += code.code[a+1];
-            b += code.code[a+2];
+
+            for (let c = 0; c < code.desloc; c++) {
+                b += code.code[a + c];   
+            };
         };
         console.log(`
 ------- code status -------
