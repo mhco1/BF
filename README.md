@@ -14,6 +14,8 @@ O `+` e o `-` são para acrecentar e retirar uma unidade na memoria atual
 
 Os valores em um espaço de memoria corresponde aos valores **decimais da tabela ASCII**, portanto são limitados ao conjunto `0 - 255`
 
+Referência para a tabela ASCII: https://web.fe.up.pt/~ee96100/projecto/Tabela%20ascii.htm
+
 Valores maiores que 255 são retornados para 0 e valores menores que 0 são retornados para 255
 
 O `.` imprimi o atual valor na memoria de acordo com a tabela ASCII
